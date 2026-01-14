@@ -421,3 +421,25 @@ footer {
         border-radius: 50%;
     }
 }
+
+/* Styling the referral field specifically */
+input[name="referred_by"] {
+    border: 1px dashed var(--accent); /* Dashed border to make it look special */
+    background-color: #f0fdf4;
+}
+
+/* Ensuring the banner text loops seamlessly */
+.banner-text {
+    display: flex;
+    animation: marquee 30s linear infinite;
+}
+
+.banner-text span {
+    flex-shrink: 0;
+    padding-right: 100px; /* Space between the repeating phrases */
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Smooth continuous loop */
+}
