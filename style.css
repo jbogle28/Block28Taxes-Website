@@ -443,3 +443,92 @@ input[name="referred_by"] {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); } /* Smooth continuous loop */
 }
+
+.requirements-section {
+    padding: 30px 0;
+    background-color: #fcfcfc;
+}
+
+.grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.neat-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-title h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+/* Decorative dots next to titles */
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot.blue { background: var(--primary); }
+.dot.green { background: var(--accent); }
+
+.sub-text {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.check-list li {
+    font-size: 0.9rem;
+    color: #4a5568;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* Custom neat checkmark */
+.check-list li::before {
+    content: 'L';
+    position: absolute;
+    left: 5px;
+    top: -2px;
+    transform: scaleX(-1) rotate(-45deg); /* Creates a checkmark shape */
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.bonus-item {
+    background: #f0fdf4;
+    padding: 8px 10px 8px 30px !important;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+    margin-top: 10px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .grid-two {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
