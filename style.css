@@ -532,3 +532,6 @@ input[name="referred_by"] {
     }
 }
 
+.field{
+    padding: 10px;
+}
