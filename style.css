@@ -1,0 +1,423 @@
+:root {
+    --primary: #1e40af; /* Deep Blue */
+    --accent: #22c55e;  /* Fresh Green */
+    --bg: #f3f4f6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+}
+
+/* Navbar */
+nav {
+    background: var(--primary);
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { color: white; font-weight: bold; font-size: 1.5rem; }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+
+.nav-links a { color: white; text-decoration: none; font-weight: 500; }
+
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section */
+.hero {
+    /* Path to your image */
+    background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('images/1.png');
+    
+    /* Center the background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Sizing the hero area */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Makes text easier to read */
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero {
+        min-height: 400px;
+    }
+}
+
+.info-section {
+    padding: 40px 0; /* Reduced from 80px */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.info-header h2 {
+    font-size: 1.8rem; /* Smaller, neater heading */
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.underline {
+    width: 40px; /* Shorter underline */
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 30px;
+    border-radius: 2px;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Tighter gap */
+    max-width: 900px; /* Constrains the width */
+    margin: 0 auto;
+}
+
+.info-card {
+    background: #fdfdfd;
+    padding: 20px 15px; /* Much smaller padding */
+    border-radius: 10px;
+    flex: 1;
+    border: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.info-card .icon {
+    font-size: 1.8rem; /* Smaller icon */
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 1rem; /* Standard readable size */
+}
+
+.info-card p {
+    color: #718096;
+    font-size: 0.85rem; /* Compact text */
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Maintain mobile friendliness */
+@media (max-width: 768px) {
+    .info-grid {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .info-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.btn {
+    background: var(--accent);
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.full-width { grid-column: span 2; }
+
+.field label { display: block; margin-bottom: 5px; font-weight: 600; color: #374151; }
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover { background: #1a365d; }
+
+/* ... Keep previous styles ... */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.bg-white { background: #fff; }
+
+.info-section {
+    text-align: center;
+    background: #eef2ff;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.cta-section {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.btn-alt {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-alt:hover {
+    background: var(--accent);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* --- Mobile Responsive Styles --- */
+
+@media screen and (max-width: 768px) {
+    /* Stack the navigation links vertically or center them */
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    /* Force the 2-column grid to become 1 column */
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the container padding smaller so form fields have more room */
+    .form-container, .container {
+        padding: 20px;
+        margin: 10px auto;
+        width: 95%;
+    }
+
+    /* Increase button and input size for "tap-friendly" mobile use */
+    input, .submit-btn, .btn {
+        padding: 15px;
+        font-size: 16px; /* Prevents iOS from auto-zooming on focus */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Container for the radio labels */
+.radio-options {
+    display: flex;
+    gap: 20px;          /* Space between 'Yes' and 'No' */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style the labels within the radio options */
+.radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;           /* Space between the circle and the text */
+    cursor: pointer;
+    font-weight: 500;
+    color: #4b5563;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    font-size: 0.95rem;
+}
+
+/* Hover effect to make them feel interactive */
+.radio-options label:hover {
+    background-color: #f3f4f6;
+}
+
+/* Style the actual radio circle to match your theme */
+.radio-options input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary); /* Makes the circle blue when checked */
+    cursor: pointer;
+}
+
+/* Mobile fix: stack them if the screen gets too narrow */
+@media (max-width: 480px) {
+    .radio-options {
+        flex-direction: row; /* Keep them side by side unless they are very long */
+        gap: 15px;
+    }
+}
+
+/* --- Moving Banner Styles --- */
+.moving-banner {
+    background: var(--accent); /* Using your highlight green */
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.banner-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+.banner-text span {
+    padding-right: 50px;
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+.whatsapp-float img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Hide text on very small phones to save space */
+@media (max-width: 480px) {
+    .whatsapp-float span {
+        display: none;
+    }
+    .whatsapp-float {
+        padding: 12px;
+        border-radius: 50%;
+    }
+}
